@@ -1,0 +1,134 @@
+@import '../../style.scss';
+
+.rightSide {
+	@include themify($themes) {
+		flex: 2.25;
+		position: sticky;
+		top: 70px;
+		height: calc(100vh - 70px);
+		overflow: scroll;
+		background-color: themed('bgSoft');
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.container {
+			min-height: 100%;
+			box-sizing: border-box;
+			padding: 20px;
+			background-color: themed('bg');
+
+			.item {
+				padding: 20px;
+
+				span {
+					color: gray;
+				}
+
+				hr {
+					margin: 20px 0px;
+					border: none;
+					height: 0.5px;
+					background-color: themed('border');
+				}
+
+				.user {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin: 20px 0px;
+					padding: 12px 16px;
+					border-radius: 6px;
+					box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+					background-color: themed('bgSoft');
+					transition: box-shadow 0.2s ease;
+
+					&:hover {
+						box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+					}
+
+					.userInfo {
+						display: flex;
+						align-items: center;
+						gap: 20px;
+						position: relative;
+
+						img {
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+							object-fit: cover;
+						}
+
+						.online {
+							width: 12px;
+							height: 12px;
+							border-radius: 50%;
+							object-fit: cover;
+							background-color: limegreen;
+							position: absolute;
+							top: 0;
+							left: 30px;
+						}
+
+						p {
+							color: themed('textColorSoft');
+						}
+
+						span {
+							font-weight: 500;
+							color: themed('textColor');
+						}
+					}
+
+					.buttons {
+						display: flex;
+						align-items: center;
+						gap: 8px;
+
+						button {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 32px;
+							height: 32px;
+							border: none;
+							border-radius: 50%;
+							color: white;
+							cursor: pointer;
+							transition:
+								background-color 0.2s ease,
+								transform 0.15s ease;
+
+							svg {
+								width: 14px;
+								height: 14px;
+							}
+
+							&:hover {
+								transform: scale(1.08);
+							}
+						}
+
+						.accept {
+							background-color: green;
+
+							&:hover {
+								background-color: rgb(48, 190, 46);
+							}
+						}
+
+						.decline {
+							background-color: red;
+
+							&:hover {
+								background-color: rgb(160, 24, 24);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+.videoGrid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 4px;
+
+	.item {
+		position: relative;
+		aspect-ratio: 3 / 4; // alle Kacheln gleich groß
+		overflow: hidden;
+		background-color: #000;
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover; // zuschneiden statt verzerren
+			display: block;
+		}
+	}
+}
+
+.playBtn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+
+	svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	// Beim Abspielen ausblenden, beim Drüberfahren wieder zeigen
+	&.playing {
+		opacity: 0;
+	}
+}
+
+.item:hover .playBtn.playing {
+	opacity: 1;
+}
+
+@media (max-width: 1200px) {
+	.videoGrid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.videoGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.videoGrid {
+		grid-template-columns: 1fr;
+	}
+}

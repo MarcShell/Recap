@@ -1,0 +1,116 @@
+@import '../../style.scss';
+
+.navbar {
+	@include themify($themes) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 20px;
+		height: 50px;
+		border-bottom: 1px solid themed('border');
+		position: sticky;
+		top: 0;
+		background-color: themed('bg');
+		color: themed('textColor');
+		z-index: 999;
+
+		.left {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+
+			.logo-link {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				text-decoration: none;
+			}
+
+			.logo-img {
+				width: 30px;
+				height: 30px;
+				object-fit: contain;
+			}
+
+			span {
+				font-weight: bold;
+				font-size: 20px;
+				color: themed('logo');
+			}
+		}
+
+		.center {
+			flex: 1;
+			display: flex;
+			align-items: center; // neu
+			justify-content: center;
+			gap: 20px; // neu
+
+			.home-link {
+				// neu
+				display: flex;
+			}
+
+			.search {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				border: 1px solid themed('border');
+				border-radius: 20px;
+				padding: 8px 16px;
+				background-color: themed('bgSoft');
+
+				svg {
+					font-size: 16px;
+				}
+
+				input {
+					border: none;
+					outline: none;
+					width: 500px;
+					background-color: transparent;
+					color: themed('textColor');
+				}
+
+				svg {
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+
+			.user {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				img {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+
+				span {
+					font-weight: bold;
+					font-size: 16px;
+				}
+			}
+		}
+
+		svg {
+			cursor: pointer;
+			color: #5bb65b;
+			font-size: 20px;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: themed('iconHover');
+			}
+		}
+	}
+}

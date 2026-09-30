@@ -1,0 +1,45 @@
+.savedGrid {
+	width: 100%;
+	columns: 4;
+	column-gap: 20px;
+
+	.item {
+		position: relative;
+		width: 100%;
+		margin-bottom: 10px;
+		break-inside: avoid;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			border-radius: 15px;
+		}
+
+		video {
+			width: 100%;
+			height: auto;
+			display: block;
+			border-radius: 15px;
+			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.savedGrid {
+		columns: 3;
+	}
+}
+
+@media (max-width: 768px) {
+	.savedGrid {
+		columns: 2;
+	}
+}
+
+@media (max-width: 480px) {
+	.savedGrid {
+		columns: 1;
+	}
+}
