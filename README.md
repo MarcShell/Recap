@@ -1,0 +1,1 @@
+Eine Social Media Web-Anwendung, mit JWT-basierter Authentifizierung, einem Follow-System, einem Feed aus Posts sowie einer Bilder-/Video-Galerie über die Pexels-API. Nutzer:innen können sich registrieren, Beiträge erstellen, anderen folgen, zwischen Light- und Dark-Mode wechseln und Bilder/Videos für sich speichern.
