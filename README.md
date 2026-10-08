@@ -4,7 +4,7 @@
 
 Eine Social-Media-Web-Anwendung, entwickelt mit React (Vite) im Frontend und Node.js/Express mit MySQL im Backend. Nutzer:innen registrieren sich und melden sich über eine JWT-basierte Authentifizierung an, erstellen Beiträge und folgen anderen. Der Feed zeigt die eigenen Beiträge und die der gefolgten Personen, sortiert nach Datum. Zusätzlich gibt es eine Bilder- und Videogalerie über die Pexels-API, deren Inhalte sich lokal speichern lassen, sowie einen Wechsel zwischen Light- und Dark-Mode.
 
-<img src="docs/login.png" width="400" /> <img src="docs/homepage-light.png" width="400" /> <img src="docs/images.png" width="400" />
+<img src="docs/login.png" width="400" /> <img src="docs/homepage-light.png" width="400" /> <img src="docs/images.png" width="400" /> <img src="docs/saved.png" width="400" />
 
 ## Features
 
